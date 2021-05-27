@@ -64,6 +64,29 @@ class _HomeScreenState extends State<HomeScreen> {
               )
             ),
           ),
+          SliverToBoxAdapter(
+            child : ContentList(
+              title : 'My List',
+              contentList : myList,
+              isOriginals : false,
+            ),
+          ),
+          SliverToBoxAdapter(
+            child : ContentList(
+              title : 'Netflex Originals',
+              contentList : myList,
+              isOriginals : true,
+            ),
+          ),
+          SliverPadding(
+            padding: const EdgeInsets.only(bottom : 20.0),
+            sliver: SliverToBoxAdapter(
+              child : ContentList(
+                title : 'Trending',
+                contentList : trending,
+              ),
+            ),
+          ),
         ],
       ),
     );

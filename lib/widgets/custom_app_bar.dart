@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import '../assets.dart';
 
 class CustomAppBar extends StatelessWidget {
-  final ScrollOffset;
+  final double scrollOffset;
 
   const CustomAppBar({
     Key key,
-    this.ScrollOffset = 0.0,
+    this.scrollOffset = 0.0,
   }) : super(key: key);
 
   @override
@@ -16,7 +16,7 @@ class CustomAppBar extends StatelessWidget {
           horizontal: 24.0,
           vertical: 10.0,
         ),
-        color: Colors.black.withOpacity((ScrollOffset / 350).clamp(0, 1).toDouble()),
+        color: Colors.red.withOpacity((scrollOffset / 350).clamp(0, 1).toDouble()),
         child: SafeArea(
           child: Row(
             children: [
@@ -51,7 +51,8 @@ class CustomAppBar extends StatelessWidget {
               ),
             ],
           ),
-        ));
+        ),
+    );
   }
 }
 

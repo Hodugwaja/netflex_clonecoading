@@ -71,7 +71,7 @@ class _CustomAppBarMobile extends StatelessWidget {
 }
 
 class _CustomAppBarDesktop extends StatelessWidget {
-  const _CustomAppBarDesktoprr({Key key}) : super(key: key);
+  const _CustomAppBarDesktop({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -103,6 +103,44 @@ class _CustomAppBarDesktop extends StatelessWidget {
                   onTap: () {
                     print("My List");
                   },
+                ),
+              ],
+            ),
+          ),
+          const Spacer(),
+          Expanded(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                IconButton(
+                  padding: EdgeInsets.zero,
+                  icon: Icon(Icons.search),
+                  color: Colors.white,
+                  onPressed: () => print('Search'),
+                ),
+                _AppBarButton(
+                  title: "KIDS",
+                  onTap: () {
+                    print("KIDS");
+                  },
+                ),
+                _AppBarButton(
+                  title: "DVD",
+                  onTap: () {
+                    print("DVD");
+                  },
+                ),
+                IconButton(
+                  padding: EdgeInsets.zero,
+                  icon: Icon(Icons.card_giftcard),
+                  color: Colors.white,
+                  onPressed: () => print('Gift'),
+                ),
+                IconButton(
+                  padding: EdgeInsets.zero,
+                  icon: Icon(Icons.notifications),
+                  color: Colors.white,
+                  onPressed: () => print('Notifications'),
                 ),
               ],
             ),
